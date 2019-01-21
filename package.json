@@ -1,0 +1,23 @@
+{
+  "name": "nodejs_cli",
+  "version": "1.0.0",
+  "description": "creation d'un programme executable en ligne de commande",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stwiertz/NodeJS_CLI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stwiertz/NodeJS_CLI/issues"
+  },
+  "homepage": "https://github.com/stwiertz/NodeJS_CLI#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "isemail": "^3.2.0"
+  }
+}
