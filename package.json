@@ -1,5 +1,5 @@
 {
-  "name": "nodejs_cli",
+  "name": "@stwiertz/fwned",
   "version": "1.0.0",
   "description": "creation d'un programme executable en ligne de commande",
   "main": "index.js",

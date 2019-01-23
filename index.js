@@ -14,40 +14,34 @@ var result = process.argv ;
 
 let uri = "https://haveibeenpwned.com/api/v2/breachedaccount/"+result[2];
 
-figlet.text('HackerMan', {
+
+ 
+console.log(chalk.blue.bgWhite(figlet.textSync('HacerMan', {
     font: "Arrows",
     horizontalLayout: 'default',
     verticalLayout: 'default'
-}, function(err, data) {
-    if (err) {
-        console.log('Something went wrong...');
-        console.dir(err);
-        return;
-    }
-    console.log(chalk.blue.bgWhite(data));
-});
- 
-const spinner = ora('Loading unicorns \n');
+})));
 
 
  
 // Send a POST request
 if(validator.validate(result[2])) {
-    setTimeout(() => {
+          
+        const spinner = ora('Loading unicorns ');
         spinner.color = 'yellow';
         spinner.text = 'Loading rainbows';
         spinner.start();
+
     axios({
                 method: 'get',
                 url: uri,
                 headers:{
-                    "user-agent" : "nodejs_cli",
+                    "user-agent" : "fwned",
                 }
             })
 
             .then(function(response){
-                
-                /* console.log(response); */
+                spinner.stop();
                 response.data.forEach(function(response) {
                     console.log(response.Name)
                                         
@@ -56,6 +50,7 @@ if(validator.validate(result[2])) {
                     
             })
             .catch(function (error){
+                spinner.stop();
                     if(error === 404){
                         console.log("Tout va bien ma caille");
                     }else{
@@ -64,8 +59,8 @@ if(validator.validate(result[2])) {
                 
             })
             
-            spinner.stop();
-        }, 1000);   
+            
+         
 }else{
     console.log("le mail n'est pas valide");
 } 
