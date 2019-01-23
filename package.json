@@ -1,6 +1,6 @@
 {
   "name": "@stwiertz/fwned",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "creation d'un programme executable en ligne de commande",
   "main": "index.js",
   "scripts": {
