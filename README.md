@@ -1,11 +1,11 @@
 NodeJS - Email Breach Checker !
 Install
 
-$ npm i omaewamailchecker
+$ npm i fwned
 
 How to use
 
-$ OmaeWaMou youremail@adress.com
+$ fwned youremail@adress.com
 
 API Used
 
