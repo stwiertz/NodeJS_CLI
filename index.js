@@ -16,7 +16,7 @@ let uri = "https://haveibeenpwned.com/api/v2/breachedaccount/"+result[2];
 
 
  
-console.log(chalk.blue.bgWhite(figlet.textSync('HacerMan', {
+console.log(chalk.blue.bgWhite(figlet.textSync('HackerMan', {
     font: "Arrows",
     horizontalLayout: 'default',
     verticalLayout: 'default'
@@ -51,10 +51,20 @@ if(validator.validate(result[2])) {
             })
             .catch(function (error){
                 spinner.stop();
-                    if(error === 404){
-                        console.log("Tout va bien ma caille");
-                    }else{
-                        console.log("mert' ");
+                    if(error.response.status ===404){
+                        
+                        console.log("You're safe");
+
+                    }
+                    else if (error.response.status === 423){
+
+                        console.log("You have made to many request")
+
+                    }
+                    else{
+
+                        console.log("something went wrong");
+
                     }
                 
             })
